@@ -4,7 +4,7 @@ class TodoApp:
     def __init__(self, root):
         self.root = root
         self.root.title("To-Do List App")
-        
+         
         # Label
         self.label = tk.Label(root, text="Welcome to the To-Do List App!")
         self.label.pack()
