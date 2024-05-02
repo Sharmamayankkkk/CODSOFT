@@ -4,7 +4,7 @@ class TodoApp:
     def __init__(self, root):
         self.root = root
         self.root.title("To-Do List App")
-         
+        
         # Label
         self.label = tk.Label(root, text="Welcome to the To-Do List App!")
         self.label.pack()
@@ -48,10 +48,9 @@ class TodoApp:
     def edit_task(self):
         selected_index = self.task_list.curselection()
         if selected_index:
-            task = self.task_entry.get()
-            if task:
-                self.task_list.delete(selected_index)
-                self.task_list.insert(selected_index, task)
+            task = self.task_list.get(selected_index)
+            self.task_entry.delete(0, tk.END)
+            self.task_entry.insert(0, task)
 
     def delete_task(self):
         selected_index = self.task_list.curselection()
