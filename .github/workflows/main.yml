@@ -1,0 +1,25 @@
+name: Python CI
+
+on:
+  push:
+    branches: [ main ]  # Run this workflow on pushes to the main branch
+  pull_request:
+    branches: [ main ]  # Run this workflow on pull requests to the main branch
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2  # Checks out your repository's code
+    - name: Set up Python 3.x
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x  # Use Python 3.x
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt  # Install dependencies if you have a requirements.txt file
+    - name: Run tests
+      run: |
+        python -m unittest discover -s . -p '*_test.py'  # Run tests using unittest, adjust the pattern if your test files have a different naming convention
