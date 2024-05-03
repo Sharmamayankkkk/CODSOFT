@@ -1,5 +1,5 @@
 # Codesoft Company Internship Projects Repository
-Welcome to the Codesof Company Internship Projects Repository! This repository contains several projects completed during my internship at Codesoft Company. Below is a brief overview of each project:
+Welcome to the Codes of Company Internship Projects Repository! This repository contains several projects completed during my internship at Codesoft Company. Below is a brief overview of each project:
 
 ## 1. Password Generato
 The Password Generator project is a Python application that generates strong and random passwords for users. Users can specify the length of the password.
